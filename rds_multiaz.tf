@@ -1,3 +1,12 @@
+resource "aws_db_subnet_group" "main" {
+  name       = "main-subnet-group"
+  subnet_ids = [aws_subnet.subnet1.id, aws_subnet.subnet2.id]
+
+  tags = {
+    Name = "main-subnet-group"
+  }
+}
+
 resource "aws_db_instance" "venus" {
   allocated_storage    = 5
   storage_type         = "gp2"
