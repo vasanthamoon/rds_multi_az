@@ -23,7 +23,7 @@ resource "aws_db_instance" "venus" {
   db_subnet_group_name = aws_db_subnet_group.main.name
 
   tags = {
-    Name = "my-rds-instance"
+    Name = "venus"
   }
 }
 
